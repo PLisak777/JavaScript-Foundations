@@ -55,10 +55,10 @@ function mortgageCalculator() {
     const denominator = Math.pow(1 + monthlyInterestRate, periods) - 1;
     const monthlyRate = principal * (numerator / denominator);
 
-    return name + " your monthly rate is " + monthlyRate.toFixed(2);
+    return `${name} your monthly rate is ${monthlyRate.toFixed(2)}`;
 }
 
-// console.log(mortgageCalculator());
+mortgageCalculator();
 
 // 🏡 Task 4: Arguments and Parameters
 /* Substitute the variables in your functions for parameters such that you can substitute `P`, `I`, and `N` when you call the function.
@@ -80,9 +80,10 @@ function mortgageCalculator(P, I, N) {
     const denominator = Math.pow(1 + monthlyInterestRate, periods) - 1;
     const monthlyRate = P * (numerator / denominator);
 
-    return name + " your monthly rate is " + monthlyRate.toFixed(2);
-}
+    console.log(`${name}, your monthly rate is ${monthlyRate.toFixed(2)}`);
 
+    // Can't get Return to work anymore, don't understand why...
+}
 mortgageCalculator(200000, 0.05, 30);
 
 // 🏡 Task 5: Conditionals
