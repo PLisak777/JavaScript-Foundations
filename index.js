@@ -92,23 +92,20 @@ Create another variable called `periods` and give it the value of years*12.
             Then, add control flow within your function such that IF creditScore is above 740, interest rate drops by 0.5%, if credit score is below 660, interest rate increases by 0.5% and if credit score is anywhere between 660 and 740 interest rate doesn't change.
             */
 
-function mortgageCalculator(P, I, N, i) {
-    let principal = 200000;
-    let interestRate = 0.05;
-    let years = 30;
+function mortgageCalculator(P, I, N, creditScore) {
+    // let principal = 200000;
+    // let interestRate = 0.05;
+    // let years = 30;
     let name = "Phil";
 
-    const monthlyInterestRate = I / 12;
-    const periods = N * 12;
-    let creditScore = [];
-    for (i = 0; i <= 800; i++);
-    creditScore.push(i);
-
     if (creditScore >= 740) {
-        monthlyInterestRate - 0.05;
+        I = I - 0.05;
     } else if (creditScore <= 660) {
-        monthlyInterestRate + 0.05;
-    } else monthlyInterestRate = monthlyInterestRate;
+        I = I + 0.05;
+    }
+
+    let monthlyInterestRate = I / 12;
+    const periods = N * 12;
 
     let numerator =
         monthlyInterestRate * Math.pow(1 + monthlyInterestRate, periods);
@@ -118,23 +115,23 @@ function mortgageCalculator(P, I, N, i) {
     return `${name}, your monthly rate is ${monthlyRate.toFixed(2)}`;
 }
 
-mortgageCalculator(200000, 0.05, 30, 770);
+console.log(mortgageCalculator(200000, 0.05, 30, 500));
 
 // 🏡 Task 6: Loops
 /* Write a new function called variableInterestRate. This function should be the same as mortgageCalculator, except it should console.log the monthly payment for 10 different interest rates at 0.5% increments plus or minus 2% from the inputted interest rate. Complete these calculations using a for loop.
 
-            For example, variableInterestRate(200000, 0.04, 30) should console.log:
+                For example, variableInterestRate(200000, 0.04, 30) should console.log:
 
-            "{Name}, with an interest rate of 0.02, your monthly rate is $739"
-            "{Name}, with an interest rate of 0.025, your monthly rate is $790"
-            "{Name}, with an interest rate of 0.03, your monthly rate is $843"
-            "{Name}, with an interest rate of 0.035, your monthly rate is $898"
-            "{Name}, with an interest rate of 0.04, your monthly rate is $955"
-            "{Name}, with an interest rate of 0.045, your monthly rate is $1013"
-            "{Name}, with an interest rate of 0.05, your monthly rate is $1074"
-            "{Name}, with an interest rate of 0.055, your monthly rate is $1136"
-            "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
-            */
+                "{Name}, with an interest rate of 0.02, your monthly rate is $739"
+                "{Name}, with an interest rate of 0.025, your monthly rate is $790"
+                "{Name}, with an interest rate of 0.03, your monthly rate is $843"
+                "{Name}, with an interest rate of 0.035, your monthly rate is $898"
+                "{Name}, with an interest rate of 0.04, your monthly rate is $955"
+                "{Name}, with an interest rate of 0.045, your monthly rate is $1013"
+                "{Name}, with an interest rate of 0.05, your monthly rate is $1074"
+                "{Name}, with an interest rate of 0.055, your monthly rate is $1136"
+                "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
+                */
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
